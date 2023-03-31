@@ -30,7 +30,7 @@ public class SalePhase {
         System.out.println(player.getName() + ", lancia un offerta, è il tuo turno. Vuoi acquistare la " + property.getName() + "?");
         Scanner scanner = new Scanner(System.in);       // utilizzo la classe Scanner perchè bufferedreader fa merda
         int offer = scanner.nextInt();                  //prendo il numero di monete offerte da riga di comando
-        int cash = 14000 - offer*1000;
+        int cash = 15 - offer;
         player.setCash(cash);
         System.out.println(player.getName() + " hai offerto $" + offer*1000 + " per la proprietà: " + property.getName());
         return offer;
@@ -40,6 +40,7 @@ public class SalePhase {
     private int makeOffer(Player player, Property property) {
         // qua va implementato il metodo per i BOT
         // creare un algoritmo che esegua azioni randomiche o implementare una strategia.
+        System.out.println("offerta lanciata");
         return 0;
     }
 

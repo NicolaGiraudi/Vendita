@@ -18,19 +18,11 @@ public class Main {
         properties.add(property1);
         properties.add(property2);
 
-        // Test fase compra vendita
-        SalePhase salePhase = new SalePhase(players);
-        salePhase.addPropertyForSale(property1);
-        salePhase.addPropertyForSale(property2);
-
-        // Offerta e vendita
-        salePhase.placeOffer();
-        salePhase.sellProperties();
 
         // Risultato finale
         for (Player player : players) {
             System.out.println("Nome giocatore: " + player.getName());
-            System.out.println("Soldi: " + player.getCash());
+            System.out.println("Soldi: " + (Integer) (player.getCash()*1000));
             System.out.println("Proprietà: " + player.getProperties());
             System.out.println();
         }
